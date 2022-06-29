@@ -1,0 +1,923 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 60px 600px auto auto auto 80px;
+    grid-template-areas:"navbar navbar navbar navbar"
+                        "header header header header"
+                        "main   main   main   main"
+                        "main   main   main   main"
+                        "sidebar sidebar sidebar sidebar" 
+                        "footer footer footer footer";
+}
+.navbar{
+    grid-area: navbar;
+    background-color: #6E98B8;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+}
+.navbar ul li{
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+.navbar ul li ul{
+    display: none;
+}
+.navbar ul li:hover ul{
+    position: absolute;
+    background-color: #6E98B8;
+}
+.logo img{
+    width: 50px;
+}
+.logo{
+    margin-left: 5px;
+    cursor: pointer;
+}
+.redes img{
+width: 28px;
+}
+.header{
+    grid-area: header;
+    background-image:url(../img/material-deportivo.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    height: 600px;
+}
+.titulo{
+    display: flex;
+    color: #1F4E7A;
+    text-align: center;
+    font-size: 4rem;
+    margin: 12px;
+    font-family: Anton;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+#subtitulo{
+    display: flex;
+    font-size: 30px;
+    color: #327EC7;
+    margin: 10px;
+    font-style: italic;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    
+}
+.main{
+    grid-area: main;
+}
+#bienvenido{
+    font-size: 30px;
+    padding: 10px;
+    color: #1F4E7A;
+}
+.contenedorTarjeta{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+.tarjeta{
+    width: 40%;
+    align-items: center;
+    padding: 10px;
+    background-color: #6E98B8;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 10px;
+    color: #000;
+    text-align: center;
+}
+.tarjeta__titulo{
+    font-size: 20px;
+    margin: 5px 0 px;
+}
+.tarjeta__img{
+    width: 80px;
+}
+.btn{
+background-color: #1F4E7A;
+padding: 10px 14px;
+color: white;
+margin-bottom: 5px;
+border-radius: 5px;
+}
+.tarjeta h5{
+    font-size: 24px;
+}
+.tarjeta p{
+    font-size: 20px;
+}
+.tarjeta img{
+    width: 80%;
+    padding: 10px;
+}
+.tamaniotarjeta{
+    width: 50%;
+    margin: 10px;
+}
+.tit__nov{
+    color: #1F4E7A;
+    text-align: center;
+    font-size: 4rem;
+    margin: 12px;
+    font-family: Anton;
+}
+.contenedor__novedades{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #1F4E7A;
+}
+.img__nov{
+    width: 40%;
+    background-color: #6E98B8;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+.contenedoraVideos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    border: 1px solid #000;
+    background-color:#1F4E7A;
+    border-radius: 5px;
+    margin: 10px;
+}
+.video{
+    margin: 10px;
+    padding: 10px;
+    background-color: #6E98B8;
+    border-radius: 10px;
+}
+.contenedorEnlases{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    background-color: #1F4E7A;
+}
+.enlace{
+    background-color: #6E98B8;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.enlace img{
+    align-content: center;
+    margin: 10px;
+    padding: 5px;
+    justify-content: center;
+    width: 400px;
+}
+.cajaMarcas{
+    display: flex;
+    flex-direction:column;
+}
+.tituloMarcas{
+    color: #1F4E7A;
+    text-align: center;
+    font-size: 60px;
+    margin: 12px;
+    font-family: Anton;
+    font-style: oblique;
+}
+.marcas{
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.sidebar{
+    grid-area: sidebar;
+}
+.contenedorPromocion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    background-color: #1F4E7A;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.promocion img{
+    width: 400px;
+    background-color: #6E98B8;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.promocion h3{
+    text-align: center;
+    font-family: Anton;
+    font-style: normal;
+    font-size: 20px;
+}
+.contenedorInfoPers{
+    margin: 5px;
+    display: flex;
+}
+.infoPersonal{
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+}
+.contenedoraEmail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    background-color: #1F4E7A;
+    border-radius: 10px;
+}
+.contenedorIngresaEmail{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: center;
+    height: 20px;
+}
+.ingresaEmail{
+    text-align: center;
+    height: 20px;
+    justify-content: center;
+    margin-top: 50%;
+}
+.submit{
+    margin-top: 50%;
+    height: 20px;
+    background-color:#6E98B8;
+    border-radius: 5px;
+}
+.frase{
+    width: 400px;
+    margin: 40px;
+    padding: 5px;
+    justify-content: flex-start;
+    border-width: 5px;
+    border-color: #6E98B8;
+    border-style: solid;
+    border-radius: 5px;
+    background-size: cover;
+    text-align: center;
+    font-size: 40px;
+    font-family: Anton;
+    font-style: oblique
+}
+.pieDespedida{
+    color: #1F4E7A;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 12px;
+    font-family: Anton;
+}
+.footer{
+    grid-area: footer;
+    display: flex;
+    height: 60px;
+    background-color: #1F4E7A;
+    margin: 5px;
+    
+}
+.footer h5{
+    text-align: start;
+    
+    padding: 5px;
+}
+
+@media(max-width:768px){
+    .container{
+        grid-template-rows: 70px 600px auto auto 80px;
+        grid-template-areas:"navbar  navbar  navbar  navbar"
+                            "header  header  header  header"
+                            "main    main    main    main"
+                            "sidebar sidebar sidebar sidebar"
+                            "footer  footer  footer  footer";
+    }
+    .navbar ul li{
+        display: inline-block;
+        padding: 8px;
+        font-size: 17px;
+        margin-bottom: 15px;
+        align-items: flex-end;
+    }
+    .redes{
+        margin-top: 5px;
+        margin-right: 5px;
+        margin-bottom: 45px;
+        display: flex;
+        flex-direction: column;
+    }
+    .redes img{
+        width: 18px;
+    }
+    .logo img{
+        width: 35px;
+        margin-top: 5px;
+        margin-right: 1px;
+        margin-bottom: 45px;
+    }
+    .contenedoraEmail{
+        flex-direction:column;
+        height: 250px;
+        align-items: center;
+        align-content:space-around;
+    }
+    .frase{
+        font-size: 30px;
+    }
+    .contenedorIngresaEmail{
+        flex-direction:column;
+        flex: content;
+        margin: 5px;
+        padding: 5px;
+        width:10px;
+        align-content: center;
+    }
+}  
+@media(max-width:576px){
+    .container{
+        grid-template-rows: 70px 600px auto auto 80px;
+        grid-template-areas:"navbar navbar navbar navbar"
+                            "header header header header"
+                            "main   main   main   main"
+                            "sidebar sidebar sidebar sidebar"
+                            "footer footer footer footer";
+    }
+    .navbar ul li{
+        display: inline-block;
+        padding: 8px;
+        font-size: 13px;
+        margin-top: 5px;
+        align-items:flex-start;
+    }
+    .tarjeta{
+        width: 75%;
+        flex-direction: column;
+    }
+    .img__nov{
+        width: 450px;
+        background-color: #6E98B8;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        height: 500px;
+    }
+}
+@media(max-width:480px){
+    .container{
+        grid-template-rows: 65px 600px auto auto 80px;
+        grid-template-areas:"navbar navbar navbar navbar"
+                            "header header header header"
+                            "main   main   main   main"
+                            "sidebar sidebar sidebar sidebar"
+                            "footer footer footer footer";
+    }
+    .navbar{
+        grid-area: navbar;
+        background-color: #6E98B8;
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .navbar ul li{
+        display: inline-block;
+        padding: 5px;
+        font-size: 8px;
+        
+    }
+    .redes{
+        margin-top: 5px;
+        margin-right: 5px;
+        margin: 5px;
+        display: flex;
+        flex-direction: row;
+        border: 5px;
+    }
+    .logo img{
+        width: 25px;
+        margin:5px;
+        margin-right: 1px;
+    }
+    .img__nov{
+        
+        background-color: #6E98B8;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        width: 100%;
+    }
+    .enlace img{
+        width: 85%;
+    }
+    .promocion img{
+        width: 90%;
+    }
+    .fieldset{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .frase{
+        width: 90%;
+        border-width: 5px;
+        font-size: 20px;
+    }
+}
+@media(max-width:320px){
+    .container{
+        grid-template-rows: 70px 200px auto auto 80px;
+        grid-template-areas:"navbar navbar navbar "
+                            "header header header "
+                            "main   main   main   "
+                            "sidebar sidebar sidebar "
+                            "footer footer footer ";
+    }
+    .navbar{
+        grid-area: navbar;
+        background-color: #6E98B8;
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        flex-wrap: wrap;
+        
+        
+    }
+    .navbar ul li{
+        
+        padding: 8px;
+        font-size: 4px;
+        margin-top: 5px;
+        
+    }
+    
+    .redes{
+        flex-wrap: nowrap;
+        width: 25px;
+        margin: 5px;
+        margin-left: 1px;
+        border: 10px;
+        padding: 5px;
+    }
+    .logo img{
+        width: 25px;
+        margin-top: 5px;
+        margin-right: 1px;
+        
+    }
+    .tarjeta{
+        width: 95%;
+        flex-direction: column;
+    }
+    .tit__nov{
+        color: #1F4E7A;
+        text-align: center;
+        font-size: 2rem;
+        margin: 12px;
+        font-family: Anton;
+    }
+    .img__nov{
+        width: 90%;
+        background-color: #6E98B8;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        
+    }
+    .tituloMarcas{
+        color: #1F4E7A;
+        text-align: center;
+        font-size: 40px;
+        margin: 12px;
+        font-family: Anton;
+        font-style: oblique;
+    }
+    .footer{
+        background-color: #1F4E7A;
+        margin: 5px;
+        width: 100%;
+        align-items: center;
+    }
+    .footer h5{
+        justify-content: flex-start;
+        text-align: start;
+        padding: 5px;
+        border: 5px;
+        
+        
+    }
+}
+
+
+/*-----------------------INDEX-----------------------*/
+
+
+#Productos{
+    color:#1F4E7A;
+    font-size: 60px;
+    margin: 12px;
+    font-family: Anton;
+    margin-top: 10%;
+    text-align: center;
+    margin-top: 120px;
+}
+.productos{
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+.rectanguloProdu{
+    background-image: url(../img/U20hIn.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    
+}
+
+.coment__productos{
+    font-size: 35px;
+    color:#1F4E7A;
+    margin: 10px;
+    font-family: Anton;
+    padding: 10px;
+    text-align: center;
+}
+.tit__categorias{
+    font-size: 40px;
+    color:#1F4E7A;
+    margin: 10px;
+    font-family: Anton;
+    padding: 10px;
+    text-align: center;
+}
+.tit__productos{
+    display: flex;
+    font-size: 30px;
+    color:#1F4E7A;
+    margin: 10px;
+    font-family: Anton;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+.zapaRunning{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #1F4E7A;
+    margin: 10px;
+
+}
+.zapa{
+    width: 40%;
+    background-color: #6E98B8;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+.botinesFutbol{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #1F4E7A;
+    margin: 10px;
+}
+.botin{
+    width: 40%;
+    background-color: #6E98B8;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+.calzadoInv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #1F4E7A;
+    margin: 10px;
+}
+.calInv{
+    width: 40%;
+    background-color: #6E98B8;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+@media(max-width:768px){
+    .zapa{
+        width: 65%;
+    }
+    .botin{
+        width: 65%;
+    }
+    .calInv{
+        width: 65%;
+    }
+}
+@media(max-width:576px){
+    .zapa{
+        width: 75%;
+    }
+    .botin{
+        width: 75%;
+    }
+    .calInv{
+        width: 75%;
+    }
+}
+@media(max-width:480px){
+    .zapa{
+        width: 85%;
+    }
+    .botin{
+        width: 85%;
+    }
+    .calInv{
+        width: 85%;
+    }
+}
+
+
+/*-------------------PRODUCTOS---------------*/
+
+.contactos{
+    height:340px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+#Contactos{
+    color:#1F4E7A;
+    font-size: 60px;
+    margin: 12px;
+    font-family: Anton;
+    margin-top: 10%;
+    text-align: center;
+    margin-top: 120px;
+
+}
+.rectanguloContac{
+    background-image: url(../img/5834.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 300px;
+}
+.infoPersonal{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    border-width: 5px;
+    border-color: #1F4E7A;
+    border-style: solid;
+    flex-wrap: wrap;
+    align-content: center;
+    background-color: #327EC7;
+    text-align: center;
+}
+.info{
+    width: 135px;
+}
+
+/*-------------------CONTACTOS----------------*/
+
+.ubicacion{
+    height:700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+#Ubicación{
+    color:#1F4E7A;
+    font-size: 60px;
+    margin: 12px;
+    font-family: Anton;
+    margin-top: 10%;
+    text-align: center;
+    margin-top: 120px;
+}
+.desc__ubicacion{
+    justify-content: center;
+    border-width: 5px;
+    border-color: #1F4E7A;
+    border-style: solid;
+    background-color: #327EC7;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.desc__ubicacion h3{
+    font-size: 18px;
+    text-align: center;
+}
+.rectanguloUbi{
+    background-image: url(../img/futbol_1_pq3pid.webp);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 500px;
+}
+.contenedorMapa{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-evenly ;
+    border-radius: 10px;
+}
+.descUbicacion{
+    width: 600px;
+    background-color: #6E98B8;
+    padding: 20px 10px;
+    border: 5px solid rgb(121, 204, 186);
+    border-radius: 10px;
+    margin: 10px;
+}
+.mapa{
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+}
+
+/*---------------------UBICACIÓN-----------------*/
+
+.header__pag{
+    background-image: url(../img/fondoPelotasVarias.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: flex-start;
+    height: 600px;
+}
+#Nosotros{
+    color:#1F4E7A;
+    font-size: 60px;
+    margin: 12px;
+    font-family: Anton;
+    margin-top: 10%;
+    text-align: center;
+    margin-top: 120px;
+
+}
+.infoNosotros{
+    font-size: 30px;
+    color: #327EC7;
+    margin: 10px;
+    font-style: italic;
+    padding: 10px;
+    text-align: center;
+}
+.parrafosNosotros{
+    justify-content: center;
+    border-width: 5px;
+    border-color: #1F4E7A;
+    border-style: solid;
+    background-color: #327EC7;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.parrafosNosotros h3{
+    font-size: 18px;
+    text-align: center;
+}
+.rectanguloNos{
+    background-image: url(../img/5803.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 300px;
+}
+.imgFinal{
+    justify-content: center;
+    border-width: 5px;
+    border-color: #1F4E7A;
+    border-style: solid;
+    background-color: #327EC7;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.imgFinal img{
+    width: 90%;
+    margin: 5px;
+}
+
+/*------------------------NOSOTROS-----------------*/
+
+.pedidosImg{
+    margin: 5px;
+    background-size: 100%;
+    justify-content: center;
+    align-content: center;
+    margin-left: 75px;
+}
+#Pedidos{
+    color:#1F4E7A;
+    font-size: 60px;
+    margin: 12px;
+    font-family: Anton;
+    margin-top: 10%;
+    text-align: center;
+    margin-top: 120px;
+
+}
+.rectanguloPedi{
+    background-image: url(../img/XslRCp.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 300px;
+}
+.compPedido{
+    text-align: center;
+    border-width: 5px;
+    border-color: #1F4E7A;
+    border-style: solid;
+    background-color: #327EC7;
+    margin: 10px;
+    border-radius: 10px;
+    list-style: none;
+}
+.contenedorListainstructiva{
+    justify-content: center;
+    border-width: 5px;
+    border-color: #1F4E7A;
+    border-style: solid;
+    background-color: #327EC7;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.contenedorListainstructiva ol li{  
+    list-style: none;
+}
+.formInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-width: 5px;
+    border-color: #1F4E7A;
+    border-style: solid;
+    background-color: #327EC7;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/*-----------------------PEDIDOS--------------------*/
+
